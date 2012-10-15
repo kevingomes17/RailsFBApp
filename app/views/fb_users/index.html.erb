@@ -1,0 +1,29 @@
+<h1>Listing fb_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fbid</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fb_users.each do |fb_user| %>
+  <tr>
+    <td><%= fb_user.name %></td>
+    <td><%= fb_user.fbid %></td>
+    <td><%= fb_user.email %></td>
+    <td><%= fb_user.phone %></td>
+    <td><%= link_to 'Show', fb_user %></td>
+    <td><%= link_to 'Edit', edit_fb_user_path(fb_user) %></td>
+    <td><%= link_to 'Destroy', fb_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fb user', new_fb_user_path %>

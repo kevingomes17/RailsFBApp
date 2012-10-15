@@ -28,12 +28,22 @@ class HomeController < ApplicationController
 
 		   @api = Koala::Facebook::API.new(session[:access_token])
 		   	begin
+			    @me = @api.get_object("/me")
                      	@graph_data = @api.get_object("/me/friends")
 				    rescue Exception=>ex
 						puts ex.message
 						     end
 
 
+    cur_user = FbUser.find_or_initialize_by_fbid(@me["id"])
+    cur_user.email = @me["email"]
+    cur_user.name = @me["name"]
+    cur_user.save!
+
+    @graph_data.each do |friend|
+    	c = FbUser.find_or_initialize_by_fbid(:name=>friend["name"], :fbid => friend["id"])
+    	c.save!
+    end						     
                 respond_to do |format|
                  format.html {   }
 		 	     end

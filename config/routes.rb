@@ -1,4 +1,6 @@
 RailsFBApp::Application.routes.draw do
+  resources :fb_users
+
   resources :contacts
 
   get "home/index"

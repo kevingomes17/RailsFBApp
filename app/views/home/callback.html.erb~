@@ -1,7 +1,12 @@
 Looping through your statuses:<br />
+
+<%= @me["email"] %>
+
 <ul>
 
 <% @graph_data.each do |status| %>
-<%= status["message"] %> (<i><%=status["updated_time"]%></i>)<hr>
+<%= status["name"] %> (<i><%=status["id"]%></i>)<hr>
 <% end %>
 </ul>
+
+

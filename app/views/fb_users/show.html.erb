@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fb_user.name %>
+</p>
+
+<p>
+  <b>Fbid:</b>
+  <%= @fb_user.fbid %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @fb_user.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @fb_user.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_fb_user_path(@fb_user) %> |
+<%= link_to 'Back', fb_users_path %>
