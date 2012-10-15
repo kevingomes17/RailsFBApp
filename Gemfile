@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'koala', '1.5.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
 
 # Gems used only for assets and not required
 # in production environments by default.

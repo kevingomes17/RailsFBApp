@@ -1,0 +1,14 @@
+development:
+  app_id: 348999361859611
+  secret_key: d8f344757496b4284327779f1e3d4376
+  callback_uri: http://localhost:3000/
+
+test:
+  app_id: 348999361859611
+  secret_key: d8f344757496b4284327779f1e3d4376
+  callback_uri: http://localhost:3000/
+
+production:
+  app_id: 348999361859611
+  secret_key: d8f344757496b4284327779f1e3d4376
+  callback_uri: http://localhost:3000/
