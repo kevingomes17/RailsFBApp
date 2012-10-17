@@ -1,6 +1,9 @@
 Looping through your statuses:<br />
 
-<%= @me["id"] %>
+<%
+=begin%>
+<%= @me["id"] %> 
+<%= @user[0] %>
 
 <ul>
 
@@ -9,4 +12,13 @@ Looping through your statuses:<br />
 <% end %>
 </ul>
 
+<%
+=end %>
+
+<ul>
+
+<% @users.each do |user| %>
+<%= user["name"] %> (<i><%=  user["email"]%></i>)<hr>
+<% end %>
+</ul>
 
