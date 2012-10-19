@@ -1,0 +1,19 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<div class="main-container">
+  <header>
+    <h1>RailFbApp</h1>
+  </header>
+  <div class="content">
+    <a href="/home/pullfriends"><< Back</a> <br/>
+    
+    <ul>
+      <% @users.each do |user| %>
+        <%= user["name"] %> (<i><%=  user["email"]%></i>)<hr>
+      <% end %>
+    </ul>
+  </div>
+</div>

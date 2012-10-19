@@ -1,4 +1,6 @@
 RailsFBApp::Application.routes.draw do
+  resources :fb_connections
+
   resources :fb_users
 
   resources :contacts
@@ -62,5 +64,6 @@ RailsFBApp::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  match 'home/callback' => 'home#callback'
+  match 'home/pullfriends' => 'home#pullfriends'
+  match 'home/pullfbids' => 'home#pullfbids'
 end

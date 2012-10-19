@@ -1,0 +1,25 @@
+<%= form_for(@fb_connection) do |f| %>
+  <% if @fb_connection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fb_connection.errors.count, "error") %> prohibited this fb_connection from being saved:</h2>
+
+      <ul>
+      <% @fb_connection.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_fbid %><br />
+    <%= f.text_field :user_fbid %>
+  </div>
+  <div class="field">
+    <%= f.label :friend_fbid %><br />
+    <%= f.text_field :friend_fbid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

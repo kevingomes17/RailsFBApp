@@ -1,0 +1,31 @@
+<div class="main-container">
+  <header>
+    <h1>RailFbApp</h1>
+  </header>
+  <div class="content">
+    <a href="/home/pullfbids">Fetch Facebook ID from email</a> <br/>
+    User: <%= @me["name"] %>  (<%= @graph_data.count %> friends)
+    <ul>
+      <% @graph_data.each do |user| %>
+        <%= user["name"] %> (<i><%=  user["id"]%></i>)<hr>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%
+=begin%>
+<%= @user[0] %>
+
+<ul>
+
+<% @graph_data.each do |status| %>
+<%= status["name"] %> (<i><%=status["id"]%></i>)<hr>
+<% end %>
+</ul>
+
+<%
+=end %>
+
+
+
